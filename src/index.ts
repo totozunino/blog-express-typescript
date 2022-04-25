@@ -1,5 +1,9 @@
 import express from "express";
 import { Router, Request, Response } from "express";
+import { config } from "dotenv";
+import { initDB } from "./database";
+
+config();
 
 const app = express();
 
@@ -14,5 +18,7 @@ route.get("/", (_request: Request, response: Response) => {
 });
 
 app.use(route);
+
+initDB();
 
 app.listen(PORT, () => `Server running on port ${PORT}!`);

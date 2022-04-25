@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
-    "rootDir": "./src",
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "./dist",
@@ -13,6 +12,6 @@
     "skipLibCheck": true,
     "noImplicitAny": true
   },
-  "include": ["src"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
