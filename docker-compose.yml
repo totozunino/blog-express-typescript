@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:alpine3.15
     restart: always
-    container_name: vianda_va_db
+    container_name: blog_db
     ports:
       - "5432:5432"
     volumes:
@@ -12,6 +12,16 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=docker
       - POSTGRES_DB=blog
+  amqp:
+    image: rabbitmq:management
+    restart: always
+    container_name: blog_amqp
+    ports:
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "15672:15672"
+      - "25672:25672"
 
 volumes:
   pgdata:
