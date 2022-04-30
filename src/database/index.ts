@@ -1,8 +1,8 @@
 import knex from "knex";
 import { Model } from "objection";
-import config from "../../knexfile";
+import { Config } from "../config";
 
 export const initDB = (): void => {
-  const knexInstance = knex(config);
+  const knexInstance = knex(Config.database[process.env.NODE_ENV || "develop"]);
   Model.knex(knexInstance);
 };
