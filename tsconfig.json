@@ -10,7 +10,18 @@
     "strict": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/routes/*": ["routes/*"],
+      "@/repositories/*": ["repositories/*"],
+      "@/services/*": ["services/*"],
+      "@/models/*": ["models/*"],
+      "@/handlers/*": ["handlers/*"],
+      "@/database/*": ["database/*"],
+      "@/config/*": ["config/*"],
+      "@/error-handling/*": ["error-handling/*"]
+    }
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules"]

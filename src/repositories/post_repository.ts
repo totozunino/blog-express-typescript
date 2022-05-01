@@ -1,4 +1,4 @@
-import { Post } from "../models/post";
+import { Post } from "@/models/post";
 
 export const findAll = async (): Promise<Post[]> => {
   return await Post.query();
